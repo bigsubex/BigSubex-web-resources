@@ -1,0 +1,990 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http:h5bp.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html {
+    /*font-size: 1em;*/
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
+	font-size: 13px;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images, videos, audio and canvas and the bottom of
+ * their containers: h5bp.com/i/440
+ */
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+/*
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+*/
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browse Happy prompt
+   ========================================================================== */
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
+/* ==========================================================================
+   Foundation Adaptions
+   ========================================================================== */
+  
+  h1,h2,h3,h4 {
+  	color: #fff;	
+  	background: #324c45; /* Old browsers */
+background: -moz-radial-gradient(center, circle cover,  #324c45 0%, #131613 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#324c45), color-stop(100%,#131613)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* IE10+ */
+background: radial-gradient(circle at center,  #324c45 0%,#131613 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#324c45', endColorstr='#131613',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+padding: 20px;
+  }
+  h1 {
+  	font-size: 2.0rem;
+  }
+  h2 {
+  	font-size: 1.8rem;
+  }
+  h3 {
+  	font-size: 1.6rem;
+  }
+  h4 {
+  	font-size: 1.5rem;
+  }
+  h5 {
+  	font-size: 1.2rem;
+  }
+  h6 {
+  	font-size: 1.0rem;
+  }
+  
+  
+  .column, .columns {
+  	padding-left: 0.703rem;
+  	padding-right: 0.703rem;
+  	
+  }
+  
+  .panel h1, .panel h2, .panel h3, .panel h4, .panel h5  {
+  	color: #fff;
+  }
+  .panel h6 {
+  	color: #333;
+  }
+  
+  .content.panel {
+  	background: #f5f5f5;
+  }
+  .content.panel h1:first-child {
+  	margin: -20px -1.25rem 10px;
+  	position: relative;
+  }
+  .content.panel .title {
+  	text-align: center; 
+  	margin-bottom: 0px;
+  }
+  
+  button, .button {
+	background-color: #2d8b43;
+	font-size: 13px;
+}
+button.disabled, button[disabled], .button.disabled, .button[disabled] {
+	background-color: #339f4c;
+}
+button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+	background-color: #339f4c;
+}
+button:hover, button:focus, .button:hover, .button:focus {
+	background-color: #007224;
+}
+button.halfround, .button.halfround {
+	-webkit-border-radius: 1000px 0 0 1000px;
+	border-radius: 1000px 0 0 1000px;
+}
+button.bordered, .button.bordered {
+	border: 1px solid rgba(255,255,255,0.7);
+}
+button.grey, .button.grey {
+background: #9a9a9a; /* Old browsers */
+background: -moz-linear-gradient(top,  #9a9a9a 54%, #8a8a8a 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(54%,#9a9a9a), color-stop(100%,#8a8a8a)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #9a9a9a 54%,#8a8a8a 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #9a9a9a 54%,#8a8a8a 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #9a9a9a 54%,#8a8a8a 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #9a9a9a 54%,#8a8a8a 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a9a9a', endColorstr='#8a8a8a',GradientType=0 ); /* IE6-9 */
+
+}  
+
+
+  .row {
+  	max-width: 63.5rem;
+  }
+  .top-bar-section .divider, .top-bar-section [role="separator"] {
+  	border-top-color: #155f50;
+  	border-bottom: 1px solid #5e9285;
+  }
+  
+  .postfix.button {
+  	line-height: 1.85rem;
+  }
+  .prefix, .postfix {
+  	height: auto;
+  	line-height: 1.7rem;
+  }
+  .panel {
+  	background: #fcfcfc;
+  }
+  
+  select {
+  	height: auto;
+  	padding: 0.3rem 0.5rem;
+  }
+  label.inline {
+  	margin: 0 0 0.5rem 0;
+  }
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+	padding: 0.3rem 0.5rem;
+	height: auto;
+}
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="month"]:focus, input[type="week"]:focus, input[type="email"]:focus, input[type="number"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="time"]:focus, input[type="url"]:focus, input[type="color"]:focus, textarea:focus {
+	box-shadow: 0 0 5px rgba(37,159,57,0.4);
+}
+
+
+fieldset {
+	background: #fbfbfb;
+}
+
+table thead {
+	background: #555;
+	-webkit-box-shadow: inset 0 -20px 20px -10px rgba(0,0,0,0.7);
+	box-shadow: inset 0 -20px 20px -10px rgba(0,0,0,0.7);
+		
+}
+table thead tr th {
+	color: #fff;
+}
+
+
+.f-dropdown li a {
+	font-size:13px;
+}
+.f-dropdown.green {
+	background: #1e7563;
+	outline: none !important;
+}
+.f-dropdown.green * {
+	outline: none !important;
+}
+.f-dropdown.green:before {
+	border-color: transparent transparent #1e7563 transparent;
+	outline: none;
+}
+.f-dropdown.green li a {
+	color: #fff;
+	padding: 10px 5px;
+}
+.f-dropdown.green li:hover a {
+	background: #72a99a;
+}
+.f-dropdown.green li.divider {
+	border-top-color: #155f50;
+	border-bottom: 1px solid #5e9285;
+}
+
+table tr.even, table tr.alt, table tr:nth-of-type(even) {
+	background: #f7f7f7;
+}
+table input[type="file"], table input[type="checkbox"], table input[type="radio"], table select {
+	margin-bottom: 0;
+}
+table input[type="text"], table input[type="password"], table input[type="date"], table input[type="datetime"], table input[type="datetime-local"], table input[type="month"], table input[type="week"], table input[type="email"], input[type="number"], table input[type="search"], table input[type="tel"], table input[type="time"], table input[type="url"], table input[type="color"], table textarea {
+	margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   jQuery UI Adaptions
+   ========================================================================== */
+.ui-widget-content {
+	background: none;
+}
+.ui-accordion .ui-accordion-content {
+	padding: 1em 0.5rem;
+}
+.ui-widget-content a.button {
+	color:#fff;
+}
+
+
+.ui-accordion .ui-accordion-header {
+	font-size: inherit;
+	font-weight: normal;
+	font-size: 14px;
+}
+
+/* ==========================================================================
+   Style
+   ========================================================================== */
+  
+  
+  
+  #header {
+  	background: url(../img/headerbg.jpg) top center;
+  }
+  #header > .row:first-child {
+  	background: #182219;
+  	
+  	background: #324c45; /* Old browsers */
+background: -moz-radial-gradient(center, circle cover,  #324c45 0%, #131613 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#324c45), color-stop(100%,#131613)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* IE10+ */
+background: radial-gradient(circle at center,  #324c45 0%,#131613 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#324c45', endColorstr='#131613',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+-webkit-box-shadow: 0 4px 20px -1px rgba(0,0,0,0.81);
+box-shadow: 0 4px 20px -1px rgba(0,0,0,0.81);
+
+  	color: #fff;
+  }
+  #header .topbox {
+  	margin-top: 10px;
+  	text-align: right;
+  	font-size: 12px;
+  	text-transform: uppercase !important;
+  }
+  #header .topbox .button {
+  	margin-left: 10px;
+  	min-width: 110px;
+  }
+  #header .topbox ul {
+  	text-align: left;
+  }
+  
+  #menu {
+  	background: #2e6059;
+  	margin: 0 -10px;
+  	-webkit-box-shadow:inset 0 3px 20px -10px rgba(0,0,0,1);
+box-shadow:inset 0 3px 20px -10px rgba(0,0,0,1);
+  }
+
+  #menu .top-bar-section ul li {
+  	background: none;
+  	background: #1e7563;
+  }
+  
+  #menu .top-bar-section li:not(.has-form) a:not(.button) {
+  	background: rgba(255,255,255,0.05);
+  	padding: 0 35px;
+  	text-transform: uppercase;
+  	font-size: 13px;
+
+  }
+  #menu .top-bar-section li:not(.has-form):hover a:not(.button) {
+  	background: #1e7563;
+  }
+  
+  #menu .top-bar-section li:not(.has-form) li > a:not(.button):hover {
+  	background: #72a99a;
+  }
+  
+  #menu .top-bar-section ul.dropdown > li > ul.dropdown {
+  	border-left: 5px solid transparent;
+  	top: 5px;
+  }
+  #menu .top-bar-section ul.dropdown > li > ul.dropdown:before {
+  	content: "";
+  	width: 0; 
+	height: 0; 
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 5px solid #72a99a;
+	position: absolute;
+	top: 15px;
+	left:-5px;
+  }
+  #menu .top-bar {
+  	height: 45px;
+  }
+  
+  
+  
+  #slider {
+  	background: #314738; /* Old browsers */
+background: -moz-linear-gradient(top,  #314738 0%, #365151 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#314738), color-stop(100%,#365151)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #314738 0%,#365151 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #314738 0%,#365151 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #314738 0%,#365151 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #314738 0%,#365151 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#314738', endColorstr='#365151',GradientType=0 ); /* IE6-9 */
+
+  }
+  
+  
+  
+  
+  #wrap {
+  	background: #dadcdc; /* Old browsers */
+background: -moz-linear-gradient(top,  #dadcdc 0%, #d5d7d7 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dadcdc), color-stop(100%,#d5d7d7)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #dadcdc 0%,#d5d7d7 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #dadcdc 0%,#d5d7d7 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #dadcdc 0%,#d5d7d7 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #dadcdc 0%,#d5d7d7 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dadcdc', endColorstr='#d5d7d7',GradientType=0 ); /* IE6-9 */
+
+  }
+  
+  #wrap > .row {
+  	position: relative;
+  }
+
+
+
+#content {
+	position: relative;
+	background: #fff;
+	margin: 20px 0;
+	z-index:2;
+	min-height: 300px;
+}
+#contentline {
+	content:"";
+	position: absolute;
+	top: 16px;
+	left: -4px;
+	right: -4px;
+	height: 8px;
+	z-index: 1;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	
+	background: #bcbcbc; /* Old browsers */
+background: -moz-linear-gradient(top,  #bcbcbc 0%, #7c7c7c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#bcbcbc), color-stop(100%,#7c7c7c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #bcbcbc 0%,#7c7c7c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #bcbcbc 0%,#7c7c7c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #bcbcbc 0%,#7c7c7c 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #bcbcbc 0%,#7c7c7c 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bcbcbc', endColorstr='#7c7c7c',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+
+
+#footer .rowone {}
+#footer .rowone a {
+	color: #535353;
+}
+#footer .rowone ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 69px;
+}
+#footer .rowone ul li {
+	display: inline;
+}
+#footer .rowone ul li a {
+	display: inline-block;
+	padding: 4px;
+	color: #3d6a25 !important;
+	text-decoration: uppercase;
+	font-weight: bold;
+	padding: 0 12px;
+	text-transform: uppercase;
+}
+#socialicons {
+	text-align: right;
+}
+#socialicons img {
+	margin: 60px 3px 2px;
+}
+
+
+#footer .rowtwo {
+	margin-bottom: 20px;
+}
+#footer .rowtwo, #footer .rowtwo ul {
+	font-size: 0.7rem;
+}
+#footer .rowtwo ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#footer .rowtwo a {
+	color: #535353;
+}
+#footer h6 a {
+	font-weight: bold;
+}
+
+
+
+.orbit-container .orbit-slides-container > * .orbit-caption {
+position: absolute;
+/* bottom: 0; */
+background-color: rgba(255,255,255,0.80);
+color: white;
+width: 50%;
+padding: 0.625rem 0.875rem;
+font-size: 0.875rem;
+color: #222;
+right: 10%;
+top: 20%;
+height: 161px;
+}
+
+
+
+.headline {
+background: #324c45; /* Old browsers */
+background: -moz-radial-gradient(center, circle cover,  #324c45 0%, #131613 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,#324c45), color-stop(100%,#131613)); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, circle cover,  #324c45 0%,#131613 100%); /* IE10+ */
+background: radial-gradient(circle at center,  #324c45 0%,#131613 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#324c45', endColorstr='#131613',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	padding: 8px ;
+	
+	position: relative;
+	margin: -20px -0.703rem 1.9375rem;
+	font-size: 13px;
+}
+
+
+.productshead, .panel .productshead {
+	margin: -1.25rem -1.25rem 1.25rem;
+}
+.productshead.small {
+	font-size: 13px;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+
+/* jstree */
+.jstree-default .jstree-node {
+	margin-left: 14px;
+}
+/*
+.jstree-default .jstree-wholerow-clicked {
+	background: #2d8b43;
+	color: #fff;
+}
+.jstree-default > .jstree-wholerow-ul .jstree-clicked {
+	color: #fff !important;
+}
+.jstree-default .jstree-wholerow-hovered {
+	background: #d5e8d9;
+}
+*/
+
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+	background-color: rgba(45,139,67,0.75);
+}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+	background-color: rgba(45,139,67,0.85);
+}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar, .mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar {
+	background-color: rgba(45,139,67,0.95);
+}
+
+
+.protokoll{}
+.protokoll .panel {
+	min-height: 660px;
+}
+.protokoll table .breadcrumbs {
+	margin-bottom: 0px;
+}
+.protokoll table .breadcrumbs > *:before {
+	margin: 0 0.4rem;
+	content: '\00BB';
+	top: -2px;
+}
+
+.protokoll ul {
+	list-style: none;
+}
+.protokoll ul ul {
+	margin-left: 15px;
+}
+
+
+
+.biglist {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.biglist li a {
+	display: block;
+	position: relative;
+	padding: 6px 10px;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	-webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.biglist li a:hover, .biglist li a.active {
+	background: #2d8b43;
+	color: #fff;
+}
+
+
+
+#products_selector .black.panel {
+	min-height: 660px;
+}
+#products_settings .black.panel, #products_search .black.panel, #products_parentlist .black.panel {
+	height: 300px;
+}
+#products_search .customscrollbar {
+	height: 200px;
+}
+#products_parentlist .customscrollbar {
+	height: 200px;
+}
+
+#products_selector .accordion {
+	position: relative;
+	margin: 0 -1.25rem;
+}
+#products_selector ul {
+	list-style: square;
+}
+
+
+
+
+
+
+#listing_nav {
+	margin-bottom: 10px;
+}
+#listing_nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#listing_nav ul > li {
+	display:block;
+	padding-left: 10px;
+}
+#listing_nav ul > li > a {
+	display: block;
+}
+
+#listing_back {
+	color: #444 !important;
+	margin-bottom: 10px;
+}
+.listing_wrapper {
+	position: relative;
+	overflow: hidden;
+	min-height: 270px;
+}
+.listing {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.listing li {
+
+	display: block;
+}
+.listing a {
+	position: relative;
+	display: block;
+	border-bottom: 1px solid #e2e2e2;
+    padding: 6px 10px;
+    font-size:13px;
+    color: #222;
+    -webkit-transition: all 300ms ease;
+	-moz-transition: all 300ms ease;
+	-ms-transition: all 300ms ease;
+	-o-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+.listing a:before {
+	content: "";
+	position: relative;
+	display: inline-block;
+	background: #2d8b43;
+	width: 4px;
+	height: 4px;
+	margin-right: 5px;
+	top: -3px;
+}
+.listing li a:hover, .listing li a.active {
+	background: #2d8b43;
+	color: #fff;
+}
+
+
+.listing li > ul {
+	z-index: 9;
+	position: absolute;
+	left: 100%;
+	width: 100%;
+	top: 0px;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+
+.actions {
+
+}
+.actions a {
+	color: #008cba;
+}
+
+
+
+
+
+
+
+/* small */
+@media only screen {
+	
+}
+
+
+@media only screen and (max-width: 40em) {
+	#menu .top-bar {
+		height: auto;
+	}
+	#menu .top-bar-section li:not(.has-form) a:not(.button) {
+		padding: 12px 0 12px 15px;
+	}
+}
+
+/* Medium  */
+@media only screen and (min-width: 40.063em) { 
+
+}
+
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) { }
+
+/* Large  */
+@media only screen and (min-width: 64.063em) { }
+
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) { } 
+
+/* XLarge  */
+@media only screen and (min-width: 90.063em) { } 
+
+
+@media only screen and (min-width: 90.063em) and (max-width: 120em) { }
+
+/* XXLarge  */
+@media only screen and (min-width: 120.063em) { } 
+
