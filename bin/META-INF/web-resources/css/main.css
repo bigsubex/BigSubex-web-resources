@@ -520,7 +520,7 @@ table input[type="text"], table input[type="password"], table input[type="date"]
   
   
   #header {
-  	background: url(../img/headerbg.jpg) top center;
+  	background: url(../images/headerbg.jpg) top center;
   }
   #header > .row:first-child {
   	background: #182219;
